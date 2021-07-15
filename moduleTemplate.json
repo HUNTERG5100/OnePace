@@ -6,7 +6,7 @@
     "developer": "hunter",
     "moduleID": "45345353434",
     "moduleImage": "",
-    "moduleVersion": 1.016,
+    "moduleVersion": 1.017,
     "moduleLenguage": "ENG",
     "moduleType": "Video",
     "baseURL": "https://www.youtube.com",
@@ -126,13 +126,12 @@
                 ],
                 "httpBody": null
               },
-              "title": "HELLO WORLD",
+              "title": "",
               "description": "",
               "field1": "",
               "field2": "",
               "field3": "",
               "field4": "",
-              "moduleId": "124312321321",
               "isChapter": false,
               "link": {
                 "url": "",

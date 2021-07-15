@@ -221,10 +221,8 @@
 
         output.push(new Output(
             CellDesings.normal1, Orientation.horizontal, DefaultLayouts.none, Paging.centered,
-            new Section("HelloWorld!", false), topLayout, "helloworld"
+            new Section('HelloWorld!', false), topLayout, 'helloworld'
         ));
-        output.push(new Output(CellDesings.wide11, Orientation.horizontal, DefaultLayouts.wideFull,Paging.leading,new Section('Hello World!',true), null, 'hello world'));
-
         
         let MainPageObject = new MainPage(new ModuleRequest('','get',emptyKeyValue,null),new Extra([new Commands('',emptyKeyValue)],emptyKeyValue),new JavascriptConfig(true,false,''),output);
     

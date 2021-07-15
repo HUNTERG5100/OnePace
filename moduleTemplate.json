@@ -11,7 +11,7 @@
     "moduleType": "Video",
     "baseURL": "https://www.youtube.com",
     "moduleDeveloperSite": "https://github.com/HUNTERG5100/OnePace",
-    "UpdateSite": "https://github.com/HUNTERG5100/OnePace/blob/main/moduleTemplate.json",
+    "UpdateSite": "https://raw.githubusercontent.com/HUNTERG5100/OnePace/main/moduleTemplate.json",
     "preferedServer": "",
     "preferedDownloadServer": "",
     "blackListed": [

@@ -217,8 +217,6 @@
         let output = [];
         let emptyKeyValue = [new KeyValue('','')];
         
-        let topLayout = new Layout(new Insets(0, 0, 0, 0), 1, 2, 4, 1, 500, new Size(400, 400), new Ratio('width', 1, 1), new Size(0, 0), 0, 0);
-
         output.push(new Output(
             CellDesings.CELLHelperText,
             Orientation.vertical,
@@ -226,7 +224,7 @@
             Paging.none,
             new Section('', false),
             null,
-            new Data("", "THIS BETTER WORK", "", "", "", "", "", false, "", false)
+            [new Data("", "THIS BETTER WORK", "", "", "", "", "", false, "", false)]
         ));
         
         let MainPageObject = new MainPage(new ModuleRequest('','get',emptyKeyValue,null),new Extra([new Commands('',emptyKeyValue)],emptyKeyValue),new JavascriptConfig(true,false,''),output);

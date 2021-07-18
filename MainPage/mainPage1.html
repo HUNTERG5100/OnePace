@@ -224,23 +224,44 @@
         var parsedJson = JSON.parse(savedData.innerHTML); 
         let output = [];
         let emptyKeyValue = [new KeyValue('','')];
-        let script = document.querySelector('script').innerHTML.replace('/*', '').replace('*/', '');
 
+        let script = document.querySelector('script').innerHTML.replace('/*', '').replace('*/', '');
         let data = [];
+
+        for (let episode of script) {
+
+        }
+
+        let onePaceImage = new ModuleRequest(
+            'https://pbs.twimg.com/media/EUolT2OWsAYzRM8.jpg', 'get',
+            emptyKeyValue, null
+        );
+        let onePaceLink = new ModuleRequest(
+            'https://youtube.com', 'get',
+            emptyKeyValue, null
+        );
+        
         let onePace = new Data(
-            'https://pbs.twimg.com/media/EUolT2OWsAYzRM8.jpg',
+            onePaceImage,
             'One Pace', 'One Pace Show',
             'unknown', 'unknown', 'unknown', 'unknown',
-            false, 'https://youtube.com'
+            false, onePaceLink
         );
         data.push(onePace);
 
         output.push(new Output(
             CellDesings.normal1, Orientation.horizontal, DefaultLayouts.wide,
             Paging.leading, new Section('One Pace', true),
-            null, data));
+            null, data)
+        );
         
-        let MainPageObject = new MainPage(new ModuleRequest('','get',emptyKeyValue,null),new Extra([new Commands('',emptyKeyValue)],emptyKeyValue),new JavascriptConfig(true,false,''),output);
+        var mainPageLink = 'https://raw.githubusercontent.com/HUNTERG5100/OnePace/main/one_pace_links.json';
+        let MainPageObject = new MainPage(
+            new ModuleRequest(mainPageLink, 'get', emptyKeyValue, null),
+            new Extra([new Commands('',emptyKeyValue)],emptyKeyValue),
+            new JavascriptConfig(true,false,''),
+            output
+        );
     
         var finalJson = JSON.stringify(MainPageObject);
         savedData.innerHTML = finalJson;

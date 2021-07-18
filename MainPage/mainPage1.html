@@ -1,4 +1,17 @@
-    <script type="text/javascript">
+<!DOCTYPE html>
+<html>
+   <body>
+      <div id="ketsu-final-data">{"javascriptConfig":{"removeJavascript":true,"loadInWebView":false,"javaScript":""},"output":[{"paging":"","layout":{"insets":{"right":0,"top":0,"left":0,"bottom":0},"constant":{"width":1,"height":2},"heightForVisibleCells":400,"visibleCellsWidthS":2,"visibleCellsWidthL":2,"visibleCellsWidthM":2,"visibleCellsHeight":2,"ratio":{"inRelation":"width","number1":1,"number2":2},"cellSize":{"width":300,"height":300},"horizontalSpacing":0,"verticalSpacing":0},"cellDesing":"normal1","data":[{"field3":"","field1":"","field2":"","field4":"","isChapter":false,"title":"","image":{"url":"","method":"get","headers":[{"key":"","value":""}]},"link":{"url":"","method":"","headers":[{"key":"","value":""}]},"description":"","openInWebView":false}],"section":{"sectionName":"","separator":false},"defaultLayout":"wide","orientation":"vertical"}],"request":{"url":"https:\/\/raw.githubusercontent.com\/HUNTERG5100\/OnePace\/main\/one_pace_links.json","method":"get","headers":[{"key":"","value":""}]},"extra":{"commands":[{"commandName":"","params":[{"key":"","value":""}]}],"extraInfo":[{"key":"","value":""}]},"global":{"cookies":[{"key":"","value":""}],"variables":[],"headers":[{"key":"","value":""}]},"responseInfo":{"headers":[{"key":"x-frame-options","value":"deny"},{"key":"Accept-Ranges","value":"bytes"},{"key":"x-xss-protection","value":"1;%20mode=block"},{"key":"x-github-request-id","value":"CF50%3A7BEE%3A96640F%3AC55C68%3A60F37227"},{"key":"Access-Control-Allow-Origin","value":"*"},{"key":"Content-Encoding","value":"gzip"},{"key":"Source-Age","value":"0"},{"key":"x-cache-hits","value":"0"},{"key":"x-content-type-options","value":"nosniff"},{"key":"Etag","value":"W%2F%2280ea2688cae34277cee57c101bc57840468d84a37f5a61893c3ce3b549b0dcfd%22"},{"key":"Via","value":"1.1%20varnish"},{"key":"Vary","value":"Authorization,Accept-Encoding"},{"key":"x-served-by","value":"cache-dal21275-DAL"},{"key":"Date","value":"Sun,%2018%20Jul%202021%2000%3A22%3A05%20GMT"},{"key":"x-cache","value":"MISS"},{"key":"Cache-Control","value":"max-age=300"},{"key":"Strict-Transport-Security","value":"max-age=31536000"},{"key":"x-timer","value":"S1626567726.759083,VS0,VE108"},{"key":"Content-Length","value":"127"},{"key":"Expires","value":"Sun,%2018%20Jul%202021%2000%3A27%3A05%20GMT"},{"key":"x-fastly-request-id","value":"0423be00e6bb5ebc72aea26724ad257411d0ecb5"},{"key":"Content-Type","value":"text%2Fplain;%20charset=utf-8"},{"key":"content-security-policy","value":"default-src%20'none';%20style-src%20'unsafe-inline';%20sandbox"}],"responseUrl":"https:\/\/raw.githubusercontent.com\/HUNTERG5100\/OnePace\/main\/one_pace_links.json","httpBody":""},"layoutInfo":{"width":375,"height":547.5}}            </div>
+      <script type="text/javascript">/*{
+         "romanceDawn.01": "https://onepace123.s3.us-east-2.amazonaws.com/Romance+Dawn/Romance+Dawn+01+-+The+Dawn+of+Adventure.mp4"
+         }
+         */
+      </script><script  type="text/javascript"></script>
+   </body>
+</html>
+
+
+<script type="text/javascript">
         const DefaultLayouts = {
          ultraWideFull : 'ultraWideFull',
          ultraWide : 'ultraWide',
@@ -211,8 +224,15 @@
         var parsedJson = JSON.parse(savedData.innerHTML); 
         let output = [];
         let emptyKeyValue = [new KeyValue('','')];
-        
-        let data = new Data("https://pbs.twimg.com/media/EUolT2OWsAYzRM8.jpg", "One Pace", "", "", "", "", "", false, "", false);
+        let script = document.querySelector('script').innerHTML.replace('/*', '').replace('*/', '');
+
+        let data = new Data(
+            'https://pbs.twimg.com/media/EUolT2OWsAYzRM8.jpg',
+            'One Pace', 'One Pace Show',
+            '', '', '', '',
+            false, '', false
+        );
+
         output.push(new Output(
             CellDesings.normal1, Orientation.horizontal, DefaultLayouts.wide,
             Paging.leading, new Section('One Pace', true),

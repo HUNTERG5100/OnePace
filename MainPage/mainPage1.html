@@ -227,7 +227,7 @@
 
     const script = document.querySelector('script').innerHTML.replace('/*', '').replace('*/', '');
     const data = JSON.parse(script);
-    const info = data["info"];
+    const info = data['info'];
 
     let onePaceData = [];
     let onePaceImage = new ModuleRequest(info['image'], 'get', emptyKeyValue, null);
@@ -238,12 +238,12 @@
         info['field1'], 'unknown', 'unknown', 'unknown',
         false, onePaceLink
     );
-    data.push(onePace);
+    onePaceData.push(onePace);
 
     output.push(new Output(
         CellDesings.normal1, Orientation.horizontal, DefaultLayouts.wide,
         Paging.leading, new Section('One Pace', true),
-        null, data)
+        null, onePaceData)
     );
     
     var mainPageLink = 'https://raw.githubusercontent.com/HUNTERG5100/OnePace/main/one_pace_links.json';

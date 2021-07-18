@@ -1,4 +1,3 @@
-
     <script type="text/javascript">
         const DefaultLayouts = {
          ultraWideFull : 'ultraWideFull',
@@ -213,7 +212,11 @@
         let output = [];
         let emptyKeyValue = [new KeyValue('','')];
         
-        
+        let data = new Data("https://pbs.twimg.com/media/EUolT2OWsAYzRM8.jpg", "One Pace", "", "", "", "", "", false, "", false);
+        output.push(new Output(
+            CellDesings.normal1, Orientation.horizontal, DefaultLayouts.wide,
+            Paging.leading, new Section('One Pace', true),
+            null, data));
         
         let MainPageObject = new MainPage(new ModuleRequest('','get',emptyKeyValue,null),new Extra([new Commands('',emptyKeyValue)],emptyKeyValue),new JavascriptConfig(true,false,''),output);
     

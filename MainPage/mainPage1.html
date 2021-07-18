@@ -226,14 +226,11 @@
         let emptyKeyValue = [new KeyValue('','')];
 
         let script = document.querySelector('script').innerHTML.replace('/*', '').replace('*/', '');
+        script = JSON.parse(script);
         let data = [];
 
-        for (let episode of script) {
-
-        }
-
         let onePaceImage = new ModuleRequest(
-            'https://pbs.twimg.com/media/EUolT2OWsAYzRM8.jpg', 'get',
+            script['info'], 'get',
             emptyKeyValue, null
         );
         let onePaceLink = new ModuleRequest(
@@ -244,7 +241,7 @@
         let onePace = new Data(
             onePaceImage,
             'One Pace', 'One Pace Show',
-            'unknown', 'unknown', 'unknown', 'unknown',
+            script['info']['field1'], 'unknown', 'unknown', 'unknown',
             false, onePaceLink
         );
         data.push(onePace);

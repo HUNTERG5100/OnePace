@@ -226,12 +226,14 @@
         let emptyKeyValue = [new KeyValue('','')];
         let script = document.querySelector('script').innerHTML.replace('/*', '').replace('*/', '');
 
-        let data = new Data(
+        let data = [];
+        let onePace = new Data(
             'https://pbs.twimg.com/media/EUolT2OWsAYzRM8.jpg',
             'One Pace', 'One Pace Show',
-            '', '', '', '',
-            false, '', false
+            'unknown', 'unknown', 'unknown', 'unknown',
+            false, 'https://youtube.com'
         );
+        data.push(onePace);
 
         output.push(new Output(
             CellDesings.normal1, Orientation.horizontal, DefaultLayouts.wide,

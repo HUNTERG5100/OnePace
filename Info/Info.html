@@ -673,15 +673,11 @@
     var title = 'One Pace';
     var image = info['image'];
     image = new ModuleRequest(image,'get',emptyKeyValue,null);
-    var genresArray = [];
-
-    for (let genre of genres) {
-        genresArray.push(genre);
-    }
+    var genresArray = genres;
 
     for (let i = 0; i < data.episodes.length; i++) {
         episodes.push(new Chapter('Episode ' + i, new ModuleRequest(
-            Object.values(data.episodes)[i], 'get', emptyKeyValue, null
+            data.episodes[i], 'get', emptyKeyValue, null
         ), false));
     }
 

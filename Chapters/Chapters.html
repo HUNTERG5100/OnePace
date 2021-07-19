@@ -72,10 +72,6 @@
     const data = JSON.parse(script);
     const episodes = data['episodes'];
 
-    for (let i = 0; i < episodes.length; i++) {
-        output.push(new NeedsResolver('OnePace', Object.values(episodes)[i]));
-    }
-
     let emptyExtra = new Extra([new Commands('', emptyKeyValue)], emptyKeyValue);
     var chaptersObject = new Chapters(new ModuleRequest('', '', emptyKeyValue, null), emptyExtra, new JavascriptConfig(false, false, ''), new Output(new Videos(null, output), null, null));
     var finalJson = JSON.stringify(chaptersObject);

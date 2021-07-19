@@ -675,11 +675,9 @@
     image = new ModuleRequest(image,'get',emptyKeyValue,null);
     var genresArray = genres;
 
-    for (let i = 0; i < data.episodes.length; i++) {
-        episodes.push(new Chapter('Episode ' + i, new ModuleRequest(
-            data.episodes[i], 'get', emptyKeyValue, null
-        ), false));
-    }
+    episodes.push(new Chapter('Episode 1', new ModuleRequest(
+        data.episodes[0], 'get', emptyKeyValue, null
+    ), false));
 
     let infoPageObject = new Info(new ModuleRequest('', '', emptyKeyValue, null), new Extra([new Commands('', emptyKeyValue)], emptyKeyValue), new JavascriptConfig(false, false, ''), new Output(image, title, parsedJson.request, desc, genres, status, 'Anime', type, 'Eps: '  + episodes.length, episodes));
     var finalJson = JSON.stringify(infoPageObject);
